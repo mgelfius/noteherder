@@ -9,16 +9,16 @@ class App extends Component {
 
     this.state = {
       notes:  {
-        'note-4': {
-          id: 'note-4',
-          title: 'Still from App state',
-          body: 'The fanciest!'
-        },
-        'note-5': {
-          id: 'note-5',
-          title: 'Another one',
-          body: 'Also very fancy',
-        },
+        // 'note-4': {
+        //   id: 'note-4',
+        //   title: 'Still from App state',
+        //   body: 'The fanciest!'
+        // },
+        // 'note-5': {
+        //   id: 'note-5',
+        //   title: 'Another one',
+        //   body: 'Also very fancy',
+        // },
       },
       currentNote: this.blankNote(),
     }
