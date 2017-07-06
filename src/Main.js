@@ -17,7 +17,8 @@ const Main = (props) => {
       />
       <NoteForm 
       currentNote={props.currentNote} 
-      saveNote= {props.saveNote}/>
+      saveNote= {props.saveNote}
+      removeCurrentNote={props.removeCurrentNote}/>
     </div>
   )
 }

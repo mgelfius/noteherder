@@ -9,16 +9,7 @@ class App extends Component {
 
     this.state = {
       notes:  {
-        // 'note-4': {
-        //   id: 'note-4',
-        //   title: 'Still from App state',
-        //   body: 'The fanciest!'
-        // },
-        // 'note-5': {
-        //   id: 'note-5',
-        //   title: 'Another one',
-        //   body: 'Also very fancy',
-        // },
+        
       },
       currentNote: this.blankNote(),
     }
@@ -51,11 +42,19 @@ class App extends Component {
     this.setCurrentNote(note)
   }
 
+  removeCurrentNote = (note) =>{
+    const notes = {...this.state.notes}
+    delete notes[this.state.currentNote.id]
+    this.setState({ notes })
+    this.resetCurrentNote()
+  }
+
   render() {
     const actions = {
       setCurrentNote: this.setCurrentNote,
       resetCurrentNote: this.resetCurrentNote,
       saveNote: this.saveNote,
+      removeCurrentNote: this.removeCurrentNote,
     }
 
     return (
