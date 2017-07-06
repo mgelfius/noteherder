@@ -1,3 +1,6 @@
+@import url(https://fonts.googleapis.com/css?family=Fauna+One|Oxygen:400,300,700);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+
 .NoteForm {
   -ms-flex-positive: 1;
   flex-grow: 1;
@@ -35,7 +38,7 @@
 .NoteForm input[name=title] {
   border: none;
   font-size: 200%;
-  font-family: Fauna One;
+  font-family: 'Fauna One';
   color: #008bf8;
   font-weight: 400;
   width: 100%;

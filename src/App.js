@@ -1,48 +1,73 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from 'react'
 
+import './App.css'
 import Main from './Main'
 
 class App extends Component {
-  constructor(){
+  constructor() {
     super()
-    this.setCurrentNote = this.setCurrentNote.bind(this)
+
     this.state = {
-      notes:{
-        'note-4':{
-          id: "hello",
-          title: 'lorem ipsum',
-          body: 'ajhbsdfh fr fuifra fifvbdferufh',
+      notes:  {
+        'note-4': {
+          id: 'note-4',
+          title: 'Still from App state',
+          body: 'The fanciest!'
         },
-        'note-5':{
-          id: 'test 2',
-          title: 'kyle xy',
-          body: 'only 90s kids remember',
+        'note-5': {
+          id: 'note-5',
+          title: 'Another one',
+          body: 'Also very fancy',
         },
       },
-      activeText:{
-          id: null,
-          title: '',
-          body: '',
-      }
+      currentNote: this.blankNote(),
     }
   }
 
-  setCurrentNote(note){
-    this.setState({activeText: note})
+  blankNote = () => {
+    return {
+      id: null,
+      title: '',
+      body: '',
+    }
+  }
+
+  setCurrentNote = (note) => {
+    this.setState({ currentNote: note })
+  }
+
+  resetCurrentNote = () => {
+    this.setCurrentNote(this.blankNote())
+  }
+
+  saveNote = (note) =>{
+    const notes = {...this.state.notes}
+    if(!note.id){
+      note.id = Date.now()
+    }
+    notes[note.id] = note
+    
+    this.setState({ notes })
+    this.setCurrentNote(note)
   }
 
   render() {
+    const actions = {
+      setCurrentNote: this.setCurrentNote,
+      resetCurrentNote: this.resetCurrentNote,
+      saveNote: this.saveNote,
+    }
+
     return (
       <div className="App">
-        <Main notes={this.state.notes} 
-        currentNote={this.state.activeText}
-        setCurrentNote={this.setCurrentNote}/>
+        <Main
+          notes={this.state.notes}
+          currentNote={this.state.currentNote}
+          {...actions}
+        />
       </div>
-
-      )
-
-}
+    )
+  }
 }
 
 export default App

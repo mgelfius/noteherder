@@ -3,7 +3,16 @@ import './NoteForm.css'
 
 
 class NoteForm extends Component{
+    handleChanges = (ev) =>{
+      const note = {...this.props.currentNote}
+      note[ev.target.name] = ev.target.value
+      this.props.saveNote(note)
+    }
+
+
     render(props){
+        const { currentNote } = this.props
+
         return(
         <div className="NoteForm">
           <div className="form-actions">
@@ -17,12 +26,15 @@ class NoteForm extends Component{
                 type="text"
                 name="title"
                 placeholder="Title your note" 
-                value= {this.props.currentNote.title} />
+                value= {this.props.currentNote.title} 
+                onChange = {this.handleChanges}/>
             </p>
             
-            <textarea name="body" 
+            <textarea 
+              name="body" 
               placeholder="Type your note here"
-              value= {this.props.currentNote.body}>
+              value= {this.props.currentNote.body}
+              onChange = {this.handleChanges}>
             </textarea>
           </form>
           
