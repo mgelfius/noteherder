@@ -6,7 +6,6 @@ import Main from './Main'
 class App extends Component {
   constructor(){
     super()
-
     this.state = {
       notes:{
         'note-4':{
@@ -17,8 +16,12 @@ class App extends Component {
         'note-5':{
           id: 'test 2',
           title: 'kyle xy',
-          body: 'only 90s kids remember'
+          body: 'only 90s kids remember',
         },
+      },
+      activeText:{
+          title: '',
+          body: '',
       }
     }
   }
@@ -26,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Main notes={this.state.notes}/>
+        <Main notes={this.state.notes} titleBody={this.state.activeText}/>
       </div>
 
       )
