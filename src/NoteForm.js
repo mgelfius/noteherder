@@ -16,14 +16,13 @@ class NoteForm extends Component{
               <input
                 type="text"
                 name="title"
-                placeholder="Title your note">
-                
-              </input>
+                placeholder="Title your note" 
+                value= {this.props.currentNote.title} />
             </p>
             
             <textarea name="body" 
-            placeholder="Type your note here">
-            
+              placeholder="Type your note here"
+              value= {this.props.currentNote.body}>
             </textarea>
           </form>
           

@@ -6,6 +6,7 @@ import Main from './Main'
 class App extends Component {
   constructor(){
     super()
+    this.setCurrentNote = this.setCurrentNote.bind(this)
     this.state = {
       notes:{
         'note-4':{
@@ -20,16 +21,23 @@ class App extends Component {
         },
       },
       activeText:{
+          id: null,
           title: '',
           body: '',
       }
     }
   }
 
+  setCurrentNote(note){
+    this.setState({activeText: note})
+  }
+
   render() {
     return (
       <div className="App">
-        <Main notes={this.state.notes} titleBody={this.state.activeText}/>
+        <Main notes={this.state.notes} 
+        currentNote={this.state.activeText}
+        setCurrentNote={this.setCurrentNote}/>
       </div>
 
       )
