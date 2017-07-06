@@ -32,7 +32,7 @@
   margin: 0;
 }
 .NoteForm form {
-  margin: 0 auto;
+  margin: 0;
   max-width: 80rem;
 }
 .NoteForm input[name=title] {
