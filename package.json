@@ -1,6 +1,6 @@
 {
   "name": "noteherder",
-  "homepage": "http://mgelfius.github.io/noteherder",
+  "homepage": "http://mgelfius.github.io/noteherder/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
