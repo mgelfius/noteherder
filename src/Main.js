@@ -16,10 +16,12 @@ const Main = (props) => {
         notes={props.notes}
         setCurrentNote={props.setCurrentNote}
       />
-      <NoteForm 
-      currentNote={props.currentNote} 
-      saveNote= {props.saveNote}
-      removeCurrentNote={props.removeCurrentNote}/>
+      <NoteForm
+        notes={props.notes}
+        currentNoteId={props.currentNoteId}
+        saveNote={props.saveNote}
+        removeCurrentNote={props.removeCurrentNote}
+      />
     </div>
   )
 }
