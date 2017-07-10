@@ -1,7 +1,7 @@
 {
   "name": "noteherder",
   "homepage": "http://mgelfius.github.io/noteherder/",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "dependencies": {
     "re-base": "^3.0.2",
