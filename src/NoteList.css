@@ -1,6 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Fauna+One|Oxygen:400,300,700);
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
-
 .NoteList {
   border-left: 1px solid #eee;
   border-right: 1px solid #eee;
@@ -15,7 +12,7 @@
   color: #999;
   text-transform: uppercase;
   font-size: 2rem;
-  font-family: 'Oxygen';
+  font-family: Oxygen;
   font-weight: 300;
   letter-spacing: 3px;
   margin: 20px 2rem;
@@ -51,27 +48,31 @@
   transition: background-color .1s ease-in-out, color .1s ease-in-out;
 }
 .NoteList ul#notes li .note {
-  border-top: 1px solid #eee;
   margin: 0 2rem;
   padding: 1rem 4px;
 }
 .NoteList ul#notes a:first-of-type li .note {
   border-top: none;
 }
-.NoteList ul#notes li:hover {
+.NoteList ul#notes li:hover,
+.NoteList ul#notes a.active li {
   background-color: #008bf8;
 }
 .NoteList ul#notes li:hover,
-.NoteList ul#notes li:hover .note * {
-  color: #fff!important;
+.NoteList ul#notes li:hover .note *,
+.NoteList ul#notes a.active li,
+.NoteList ul#notes a.active li .note-body *,
+.NoteList ul#notes a.active li .note-title  {
+  color: #fff !important;
   text-decoration: none !important;
 }
-.NoteList ul#notes li:hover .note {
+.NoteList ul#notes li:hover .note,
+.NoteList ul#notes a.active li {
   border-color: transparent;
 }
 .NoteList ul#notes li .note-title {
   color: #4a4a4a;
-  font-family: 'Fauna One';
+  font-family: Fauna One;
   font-size: 120%;
   font-weight: 400;
   white-space: nowrap;
@@ -85,10 +86,10 @@
   margin-top: .5rem;
 }
 .NoteList ul#notes li .note-body * {
-  font-size: 1em!important;
-  margin: 0!important;
-  padding: 0!important;
-  color: #999!important;
+  font-size: 1em !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: #999 !important;
   background: none;
   border: none;
 }
