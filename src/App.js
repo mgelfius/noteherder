@@ -52,9 +52,10 @@ class App extends Component {
     let shouldRedirect = false
     if (!note.id) {
       note.id = Date.now()
+      note.updatedAt = Date.now()
       shouldRedirect = true
     }
-
+    note.updatedAt = Date.now()
     const notes = {...this.state.notes}
     notes[note.id] = note
 
