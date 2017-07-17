@@ -9,7 +9,7 @@
   }
 }
 .NoteList h3 {
-  color: #999;
+  color: #008bf8;
   text-transform: uppercase;
   font-size: 2rem;
   font-family: Oxygen;
@@ -71,7 +71,7 @@
   border-color: transparent;
 }
 .NoteList ul#notes li .note-title {
-  color: #4a4a4a;
+  color: #008bf8;
   font-family: Fauna One;
   font-size: 120%;
   font-weight: 400;
